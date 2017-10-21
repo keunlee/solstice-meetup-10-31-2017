@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.4.2"
+  },
+  "scripts": {
+		"start": "node api-server.js",
+    "discovery-client": "node discovery-client.js"
+	},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eureka-js-client": "^4.3.0",
+    "hapi": "^16.6.2"
+  }
+}

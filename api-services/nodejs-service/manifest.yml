@@ -1,0 +1,7 @@
+---
+applications:
+- name: nodejs-service
+  host: nodejs-service
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+   - service-registry

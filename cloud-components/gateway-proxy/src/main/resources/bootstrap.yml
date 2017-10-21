@@ -1,0 +1,22 @@
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+---
+
+spring:
+  profiles: development
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+---
+
+spring:
+  profiles: production
+  cloud:
+    config:
+      uri: http://config-server.thekeunster.io

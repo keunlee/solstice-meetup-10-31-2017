@@ -1,0 +1,41 @@
+## Global Configurations
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    com.solstice.rest: DEBUG
+    com.solstice.service: DEBUG
+    io:
+      pivotal: DEBUG
+  pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+---
+
+## Development Profile Configurations
+
+spring:
+  profiles: development
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+---
+
+## Production Profile Configurations
+
+spring:
+  profiles: production
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://zelda001-service-registry.cfapps.io/eureka

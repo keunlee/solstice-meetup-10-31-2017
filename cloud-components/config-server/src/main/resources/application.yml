@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+---
+## Development Profile Configurations
+
+spring:
+  profiles: development
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:/Users/keunsuklee/Clients/solstice/projects/solstice-meetup-10-31-2017
+          searchPaths: cloud-components/cloud-config
+
+---
+## Production Profile Configurations
+
+spring:
+  profiles: production
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/keunlee/solstice-meetup-10-31-2017.git
+          username: klee@solstice.com
+          password: pasword
+          searchPaths: cloud-components/cloud-config

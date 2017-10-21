@@ -1,0 +1,14 @@
+---
+applications:
+- name: gateway-proxy
+  # Fork of https://github.com/cloudfoundry/java-buildpack
+  # For stability, keep your own fork.
+  buildpack: https://github.com/keunlee/java-buildpack
+  memory: 1G
+  instances: 1
+  # Because the URL will be http://super-mini.cfapps.io/
+  host: zelda001-api-gateway-server
+#  domain: local.pcfdev.io
+  path: target/api-gateway-server-1.0-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: production

@@ -1,0 +1,10 @@
+server:
+  port: 9090
+
+# zuul will auto discover all discoverable api's from eureka when zuul is enabled as a discoverable client
+zuul:
+  prefix: /gateway
+
+spring:
+  application:
+    name: zuul-server
